@@ -1,0 +1,2 @@
+Fabricator(:email) do
+end

@@ -1,6 +1,6 @@
 <div id="danke" style="height:210px; width:436px; position:inherit; background:url('<%= asset_path 'fehler.png' %>') no-repeat left bottom;">
   <div style="height:40px; width:268px; left:82px; top:150px; position:relative;">
-    <%= link_to :back do %>
+    <%= link_to root_path, id: 'fehler_close' do %>
       <%= image_tag 'danke_close.jpg', border: 0, width: 268, height: 40 %>
     <% end %>
   </div>

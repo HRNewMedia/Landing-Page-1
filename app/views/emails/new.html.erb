@@ -1,6 +1,6 @@
-<% if params[:sending] %>
-  <%= link_to 'test', fehler_path, id: 'autostart' %>
-<% else %>
+<% if params[:email] && !email.valid? %>
+  <%= link_to '', fehler_path, id: 'autostart' %>
+<% elsif email.valid? && !email.new_record? %>
   <%= link_to '', danke_path, id: 'autostart' %>
 <% end %>
 
@@ -96,7 +96,7 @@
           <li>"Für bis zu 5 Stellenanzeigen</li>
         </ul>
         <br /><br /><br />
-        <a href="beispielrechnung.php" id="various1" style="font-size:14px; padding-left:20px;"><b>&gt; Beispielrechnung</b></a>
+        <%= link_to raw('<b>&gt; Beispielrechnung</b>'), beispielrechnung_path, id: 'various1', style: "font-size:14px; padding-left:20px;" %>
 <br />
 <a href="http://www.1000jobboersen.de/wertsteigerung/angebotsbedingungen.pdf" target="_blank" style="font-size:14px; padding-left:30px;"><b>Angebotsbedingungen</b></a>
     </div>

@@ -1,1 +1,28 @@
-
+<div style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px;">
+  <BR>
+  <u>Anfrage von</u>
+  <BR>
+  <%= "#{@anrede} #{@titel} #{@name} (#{@unternehmen} / #{@position})" %>
+  <BR>
+  <%= "Versendet am: #{Time.now.strftime("d.m.Y")} um #{Time.now.strftime("H:i")} Uhr." %>
+  <BR><BR><BR>
+  <u>Absender:</u>
+  <BR>
+  <%= "Name: #{@anrede} #{@titel} #{@name}" %>
+  <BR>
+  <%= "Unternehmen: #{@unternehmen}." %>
+  <BR>
+  <%= "Position: #{@position}." %>
+  <BR><BR>
+  <%= "Tel.: #{@telefon}." %>
+  <BR>
+  E-Mail: <%= mail_to @email, @email %>
+  <BR><BR><BR>
+  <u>Mitteilung</u>:
+  <BR>
+  <%= @mitteilung %>
+  <BR><BR><BR>
+  <%= mail_to @email, 'Antwort schreiben' %>
+  <BR><BR>
+  <HR>
+</div>

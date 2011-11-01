@@ -1,8 +1,14 @@
 class EmailsController < ApplicationController
   respond_to :html
 
+  expose(:email)
+
   def create
-    Mailer.lead_notification(params).deliver
-    redirect_to root_path(sending: 'sending')
+    if email.save
+      Mailer.lead_notification(email).deliver
+      respond_with(email, location: root_path)
+    else
+      respond_with(email)
+    end
   end
 end
