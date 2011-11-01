@@ -1,0 +1,141 @@
+<% if params[:sending] %>
+  <%= link_to '', fehler_path, id: 'autostart' %>
+<% else %>
+  <%= link_to 'test', danke_path, id: 'autostart' %>
+<% end %>
+
+<div id="page-container" class="page-container">
+
+  <div id="page-header" class="page-header">
+    <div id="logo" class="logo">
+      <%= link_to 'http://www.1000jobboersen.de' do %>
+        <%= image_tag '1000jb_logo.jpg', width: 380, height: 56, border: 0 %>
+      <% end %>
+    </div>
+    <div id="hotline" class="hotline">
+      <%= image_tag 'hotline.jpg', width: 222, height: 68, border: 0 %>
+    </div>
+  </div>
+  <div id="page-content" class="page-content">
+
+    <!-- formular container /Start-->
+    <div id="page-form-top-container" class="page-form-top-container">
+
+  <div id="page-form-top" class="page-form-top typo"></div>
+  <div id="page-form-txt" class="page-form-txt">
+    <%= image_tag 'form_bg_txt.jpg', border: 0, style: 'padding-left:10px; padding-top:10px;' %>
+  </div>
+  <div id="page-form-mid" class="page-form-mid typo">
+
+<%= form_tag emails_path, name: 'angebot' do %>
+<table width="442" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="3" style="padding-top: 10px;padding-bottom:10px; line-height:13px;">
+  Damit wir Sie beraten können, bitten wir Sie um die folgenden Angaben. Unsere Spezialisten werden sich innerhalb eines Werktages bei Ihnen melden.
+  <!--
+    <br />
+    Falls Sie bereits eine Stellenanzeige haben, zu der Sie ein Angebot erhalten möchten, können Sie diese mit der Upload-Funktion direkt an uns senden. -->
+    </td>
+  </tr>
+  <tr>
+    <td width="115" style="padding-top:10px;">Anrede:<br />
+    <select name="anrede" id="anrede" class="form skurz" onclick="MM_changeProp('anrede','','backgroundColor','#fff'); MM_changeProp('titel','','backgroundColor','#fccd7f'); MM_changeProp('name','','backgroundColor','#fccd7f'); MM_changeProp('unternehmen','','backgroundColor','#fccd7f'); MM_changeProp('position','','backgroundColor','#fccd7f'); MM_changeProp('telefon','','backgroundColor','#fccd7f'); MM_changeProp('email','','backgroundColor','#fccd7f'); MM_changeProp('mitteilung','','backgroundColor','#fccd7f');">
+      <option value="Herr" selected="selected">Herr</option>
+      <option value="Frau">Frau</option>
+    </select>
+    </td>
+    <td width="115" style="padding-top:10px;">Titel:<br />
+    <select name="titel" id="titel" class="form skurz" onclick="MM_changeProp('anrede','','backgroundColor','#fccd7f'); MM_changeProp('titel','','backgroundColor','#fff'); MM_changeProp('name','','backgroundColor','#fccd7f'); MM_changeProp('unternehmen','','backgroundColor','#fccd7f'); MM_changeProp('position','','backgroundColor','#fccd7f'); MM_changeProp('telefon','','backgroundColor','#fccd7f'); MM_changeProp('email','','backgroundColor','#fccd7f'); MM_changeProp('mitteilung','','backgroundColor','#fccd7f');">
+      <option value="" selected="selected">&nbsp;</option>
+      <option value="dr.">Dr.</option>
+      <option value="prof.">Prof.</option>
+      <option value="dipl.ing.">Dipl.Ing.</option>
+    </select>
+    </td>
+    <td width="216" style="padding-top:10px;">* Name, Vorname:<br />
+    <input name="name" id="name" type="text" class="form kurz" onclick="MM_changeProp('anrede','','backgroundColor','#fccd7f'); MM_changeProp('titel','','backgroundColor','#fccd7f'); MM_changeProp('name','','backgroundColor','#fff'); MM_changeProp('unternehmen','','backgroundColor','#fccd7f'); MM_changeProp('position','','backgroundColor','#fccd7f'); MM_changeProp('telefon','','backgroundColor','#fccd7f'); MM_changeProp('email','','backgroundColor','#fccd7f'); MM_changeProp('mitteilung','','backgroundColor','#fccd7f');" onfocus="this.value = ''" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top:10px;">* Ihr Unternehmen:<br />
+    <input name="unternehmen" type="text" id="unternehmen" class="form kurz" onclick="MM_changeProp('anrede','','backgroundColor','#fccd7f'); MM_changeProp('titel','','backgroundColor','#fccd7f'); MM_changeProp('name','','backgroundColor','#fccd7f'); MM_changeProp('unternehmen','','backgroundColor','#fff'); MM_changeProp('position','','backgroundColor','#fccd7f'); MM_changeProp('telefon','','backgroundColor','#fccd7f'); MM_changeProp('email','','backgroundColor','#fccd7f'); MM_changeProp('mitteilung','','backgroundColor','#fccd7f');" onfocus="this.value = ''" /></td>
+    <td style="padding-top:10px;">Position:<br />
+      <input name="position" id="position" type="text" class="form kurz" onclick="MM_changeProp('anrede','','backgroundColor','#fccd7f'); MM_changeProp('titel','','backgroundColor','#fccd7f'); MM_changeProp('name','','backgroundColor','#fccd7f'); MM_changeProp('unternehmen','','backgroundColor','#fccd7f'); MM_changeProp('position','','backgroundColor','#fff'); MM_changeProp('telefon','','backgroundColor','#fccd7f'); MM_changeProp('email','','backgroundColor','#fccd7f'); MM_changeProp('mitteilung','','backgroundColor','#fccd7f');" onfocus="this.value = ''" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top:10px;">Vorwahl + Rufnummer:<br />
+    <input type="text" name="telefon" id="telefon" class="form kurz" onclick="MM_changeProp('anrede','','backgroundColor','#fccd7f'); MM_changeProp('titel','','backgroundColor','#fccd7f'); MM_changeProp('name','','backgroundColor','#fccd7f'); MM_changeProp('unternehmen','','backgroundColor','#fccd7f'); MM_changeProp('position','','backgroundColor','#fccd7f'); MM_changeProp('telefon','','backgroundColor','#fff'); MM_changeProp('email','','backgroundColor','#fccd7f'); MM_changeProp('mitteilung','','backgroundColor','#fccd7f');" onfocus="this.value = ''" /></td>
+    <td style="padding-top:10px;">* E-Mail Adresse:<br />
+      <input type="text" name="email" id="email" class="form kurz" onclick="MM_changeProp('anrede','','backgroundColor','#fccd7f'); MM_changeProp('titel','','backgroundColor','#fccd7f'); MM_changeProp('name','','backgroundColor','#fccd7f'); MM_changeProp('unternehmen','','backgroundColor','#fccd7f'); MM_changeProp('position','','backgroundColor','#fccd7f'); MM_changeProp('telefon','','backgroundColor','#fccd7f'); MM_changeProp('email','','backgroundColor','#fff'); MM_changeProp('mitteilung','','backgroundColor','#fccd7f');" onfocus="this.value = ''" /></td>
+    </tr>
+  <tr>
+    <td colspan="3" style="padding-top:10px;">Mitteilungen (z.B. bevorzugte Anrufzeit)<br />
+    <textarea name="mitteilung" id="mitteilung" value="Ihre Mitteilung" class="form lang" rows="2" onclick="MM_changeProp('anrede','','backgroundColor','#fccd7f'); MM_changeProp('titel','','backgroundColor','#fccd7f'); MM_changeProp('name','','backgroundColor','#fccd7f'); MM_changeProp('unternehmen','','backgroundColor','#fccd7f'); MM_changeProp('position','','backgroundColor','#fccd7f'); MM_changeProp('telefon','','backgroundColor','#fccd7f'); MM_changeProp('email','','backgroundColor','#fccd7f'); MM_changeProp('mitteilung','','backgroundColor','#fff');" onfocus="this.value = ''" /></textarea></td>
+    </tr>
+  <tr>
+    <td colspan="3" style="padding-top:15px; padding-bottom:15px;">
+    <!--<input name="send" type="hidden" class="form kurz" id="send" value="sending" />-->
+    
+    <input type="image" border="0" name="senden" alt="Angebot anfordern" src="<%= asset_path 'btn_senden.jpg' %>">
+    <!--<a href="danke.php" id="various2"><img src="img/btn_senden.jpg" border="0" alt="Angebot anfordern" /></a>-->
+    
+    </td>
+    </tr>
+</table>
+<% end %>
+<!-- Formular ENDE -->
+    
+    </div>
+  <div id="page-form-bottom" class="page-form-bottom typo"></div>  
+    <span style="padding-left:20px;">* - Pflichtfelder</span>
+    </div>
+    <!-- formular container /Ende-->
+    
+    <div id="teaser" class="teaser">
+        
+    <div id="angebot" class="angebot">
+    
+      <ul style="margin-left:-10px; padding-top:50px;">
+          <li>Individuelle Auswahl der relevanten Jobbörsen,<br />Nischenportale und Social Media-Kanäle</li>
+          <li>Kostenfreie Beratung durch unsere Spezialisten</li>
+          <li>Professionelles Layout, Titel- und Textoptimierung</li>
+          <li>Anzeigen-Veröffentlichung und Refresh</li>
+          <li>Bestes Preis-Leistungsverhältnis</li>
+          <li>500 Euro Wertbonus je 1.000 Euro Anzeigenwert</li>
+          <li>"Für bis zu 5 Stellenanzeigen</li>
+        </ul>
+        <br /><br /><br />
+        <a href="beispielrechnung.php" id="various1" style="font-size:14px; padding-left:20px;"><b>&gt; Beispielrechnung</b></a>
+<br />
+<a href="ahttp://www.1000jobboersen.de/wertsteigerung/angebotsbedingungen.pdf" target="_blank" style="font-size:14px; padding-left:30px;"><b>Angebotsbedingungen</b></a>
+        
+    </div>
+    
+    </div>
+    
+  </div>
+    
+</div>
+
+<div id="page-footer" class="page-footer">
+
+<div style="height:98px; width:80px; position:inherit; float:right; margin-bottom:-20px; margin-right:10px;">
+<a href="http://karriere.de/"><img src="http://1000jobboersen.de/images/logos/faircompany.png" width="77" height="99" border="0" alt="karriere.de" /></a>
+</div>
+
+<div style="height:60px; width:330px; background:url('http://1000jobboersen.de/stylesheets/_img/bg-jobfinder.png') no-repeat left bottom; padding:30px 0px 10px 95px;; position:inherit; float:right;">
+<span style="color:#1e518b; font-size:20px; font-weight:bold;">Unser Partnerportal:<br /></span>
+<a href="http://www.jobboersenfinder.de/" style="color:#313131; font-size:24px; font-weight:bold;">www.jobboersenfinder.de</a>
+</div>
+
+<div id="footer-menu" class="footer-menu">
+<a href="http://1000jobboersen.de/kontakt" style="padding-right:18px;">Kontakt</a> - 
+<a href="http://1000jobboersen.de/agb" style="padding-right:18px; padding-left:18px;">AGB</a> - 
+<a href="http://1000jobboersen.de/impressum" style="padding-left:18px;">Impressum</a>
+</div>
+ 
+</div>
+<div id="page-copy" class="page-copy">
+© 2011 - HR New Media GmbH, Tauentzienstraße 14 | 10789 Berlin, 1000jobboersen.de | 
+Sitz: Berlin | HRB 114159 B - Amtsgericht Berlin-Charlottenburg | 
+Geschäftsführer: Florian Behn, Benjamin Pochhammer
+</div>
