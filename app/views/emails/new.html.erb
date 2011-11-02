@@ -45,12 +45,12 @@
     <%= form.input_field :title, collection: %w(dr. prof. dipl.ing), id: 'titel', :class => 'form skurz' %>
     </td>
     <td width="216" style="padding-top:10px;">* Name, Vorname:<br />
-      <%= form.input_field :first_name, id: 'name', :class => 'form kurz' %>
+      <%= form.input_field :name, id: 'name', :class => 'form kurz' %>
   </td>
   </tr>
   <tr>
     <td colspan="2" style="padding-top:10px;">* Ihr Unternehmen:<br />
-    <%= form.input_field :last_name, id: 'unternehmen', :class => 'form kurz' %>
+    <%= form.input_field :company, id: 'unternehmen', :class => 'form kurz' %>
   </td>
   <td style="padding-top:10px;">Position:<br />
     <%= form.input_field :position, id: 'position', :class => 'form kurz' %>

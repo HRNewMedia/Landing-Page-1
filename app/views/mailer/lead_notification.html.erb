@@ -2,27 +2,27 @@
   <BR>
   <u>Anfrage von</u>
   <BR>
-  <%= "#{@anrede} #{@titel} #{@name} (#{@unternehmen} / #{@position})" %>
+  <%= "#{@email.salutation} #{@email.title} #{@email.name} (#{@email.company} / #{@email.position})" %>
   <BR>
-  <%= "Versendet am: #{Time.now.strftime("d.m.Y")} um #{Time.now.strftime("H:i")} Uhr." %>
+  <%= "Versendet am: #{@email.created_at.strftime("d.m.Y")} um #{@email.created_at.strftime("H:i")} Uhr." %>
   <BR><BR><BR>
   <u>Absender:</u>
   <BR>
-  <%= "Name: #{@anrede} #{@titel} #{@name}" %>
+  <%= "Name: #{@email.salutation} #{@email.title} #{@email.name}" %>
   <BR>
-  <%= "Unternehmen: #{@unternehmen}." %>
+  <%= "Unternehmen: #{@email.company}." %>
   <BR>
-  <%= "Position: #{@position}." %>
+  <%= "Position: #{@email.position}." %>
   <BR><BR>
-  <%= "Tel.: #{@telefon}." %>
+  <%= "Tel.: #{@email.phone}." %>
   <BR>
-  E-Mail: <%= mail_to @email, @email %>
+  E-Mail: <%= mail_to @email.email, @email.email %>
   <BR><BR><BR>
   <u>Mitteilung</u>:
   <BR>
-  <%= @mitteilung %>
+  <%= @email.notes %>
   <BR><BR><BR>
-  <%= mail_to @email, 'Antwort schreiben' %>
+  <%= mail_to @email.email, 'Antwort schreiben' %>
   <BR><BR>
   <HR>
 </div>

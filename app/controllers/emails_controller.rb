@@ -6,7 +6,7 @@ class EmailsController < ApplicationController
   def create
     if email.save
       Mailer.lead_notification(email).deliver
-      respond_with(email, location: root_path)
+      respond_with(email, location: root_path(id: email.id))
     else
       respond_with(email)
     end
