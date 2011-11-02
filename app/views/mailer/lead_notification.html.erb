@@ -4,7 +4,7 @@
   <BR>
   <%= "#{@email.salutation} #{@email.title} #{@email.name} (#{@email.company} / #{@email.position})" %>
   <BR>
-  <%= "Versendet am: #{@email.created_at.strftime("d.m.Y")} um #{@email.created_at.strftime("H:i")} Uhr." %>
+  <%= "Versendet am: #{@email.created_at.strftime("%d.%m.%Y")} um #{@email.created_at.strftime("%H:%m")} Uhr." %>
   <BR><BR><BR>
   <u>Absender:</u>
   <BR>
