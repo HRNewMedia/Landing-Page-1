@@ -9,7 +9,7 @@ class Mailer < ActionMailer::Base
     ]
 
     mail(
-      to: [email.email, 'matt.beedle@1000jobboersen.de'], subject: subject.join(' '),
+      to: [email.email, 'wertsteigerung@1000jobboersen.de'], subject: subject.join(' '),
       from: '1000jobboersen.de <service@1000jobboersen.de>'
     )
   end
