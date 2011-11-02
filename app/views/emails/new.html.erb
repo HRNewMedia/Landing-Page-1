@@ -42,7 +42,7 @@
     <%= form.input_field :salutation, collection: %w(Herr Frau), id: 'anrede', :class => 'form skurz' %>
     </td>
     <td width="115" style="padding-top:10px;">Titel:<br />
-    <%= form.input_field :title, collection: %w(dr. prof. dipl.ing), id: 'titel', :class => 'form skurz' %>
+    <%= form.input_field :title, collection: %w(Dr. Prof. Dipl.-Ing), id: 'titel', :class => 'form skurz' %>
     </td>
     <td width="216" style="padding-top:10px;">* Name, Vorname:<br />
       <%= form.input_field :name, id: 'name', :class => 'form kurz' %>
@@ -93,12 +93,12 @@
           <li>Anzeigen-Veröffentlichung und Refresh</li>
           <li>Bestes Preis-Leistungsverhältnis</li>
           <li>500 Euro Wertbonus je 1.000 Euro Anzeigenwert</li>
-          <li>"Für bis zu 5 Stellenanzeigen</li>
+          <li>Für bis zu 5 Stellenanzeigen</li>
         </ul>
         <br /><br /><br />
         <%= link_to raw('<b>&gt; Beispielrechnung</b>'), beispielrechnung_path, id: 'various1', style: "font-size:14px; padding-left:20px;" %>
-<br />
-<a href="http://www.1000jobboersen.de/wertsteigerung/angebotsbedingungen.pdf" target="_blank" style="font-size:14px; padding-left:30px;"><b>Angebotsbedingungen</b></a>
+        <br />
+        <%= link_to raw('<b>&gt; Angebotsbedingungen</b>'), 'http://www.1000jobboersen.de/wertsteigerung/angebotsbedingungen.pdf', target: '_blank', style: 'font-size:14px; padding-left:30px;' %>
     </div>
     </div>
   </div>
